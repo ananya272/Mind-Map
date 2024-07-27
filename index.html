@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mind Map Creator</title>
+    <link rel = "stylesheet" href="style.css">
+</head>
+<body>
+    <div class="flex flex-col items-center justify-center h-full p-6 bg-gray-100 dark:bg-gray-900">
+        <h1 class="mb-6 text-4xl font-extrabold text-gray-900 dark:text-white">Mind Map Creator</h1>
+        <div class="flex space-x-4 mb-6">
+            <button id="newMindMap" class="px-4 py-2 text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800">New Mind Map</button>
+            <button id="saveMindMap" class="px-4 py-2 text-white bg-green-600 rounded-lg hover:bg-green-700 focus:outline-none focus:ring-4 focus:ring-green-300 dark:focus:ring-green-800">Save</button>
+            <button id="deleteMindMap" class="px-4 py-2 text-white bg-red-600 rounded-lg hover:bg-red-700 focus:outline-none focus:ring-4 focus:ring-red-300 dark:focus:ring-red-800">Delete</button>
+        </div>
+        <div class="flex space-x-4 mb-6">
+            <button id="addNode" class="px-4 py-2 text-white bg-yellow-600 rounded-lg hover:bg-yellow-700 focus:outline-none focus:ring-4 focus:ring-yellow-300 dark:focus:ring-yellow-800">Add Node</button>
+            <button id="connectNodes" class="px-4 py-2 text-white bg-purple-600 rounded-lg hover:bg-purple-700 focus:outline-none focus:ring-4 focus:ring-purple-300 dark:focus:ring-purple-800">Connect Nodes</button>
+            <button id="exportMindMap" class="px-4 py-2 text-white bg-indigo-600 rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-4 focus:ring-indigo-300 dark:focus:ring-indigo-800">Export</button>
+        </div>
+        <div class="relative w-full h-96 border border-gray-300 rounded-lg bg-white dark:bg-gray-800" id="mindMapCanvas">
+            <svg id="lines"></svg>
+            <div class="absolute inset-0 flex items-center justify-center">
+                <p class="text-gray-500 dark:text-gray-400">Mind Map Canvas</p>
+            </div>
+        </div>
+        <div class="flex space-x-4 mt-6">
+            <button id="undo" class="px-4 py-2 text-white bg-gray-600 rounded-lg hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-800">Undo</button>
+            <button id="redo" class="px-4 py-2 text-white bg-gray-600 rounded-lg hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-800">Redo</button>
+        </div>
+    </div>
+    <div class="relative w-full h-96 border border-gray-300 rounded-lg bg-white dark:bg-gray-800" id="mindMapCanvas">
+        <canvas id="mindMapImageCanvas"></canvas>
+        <svg id="lines"></svg>
+        <div class="absolute inset-0 flex items-center justify-center">
+            <p class="text-gray-500 dark:text-gray-400">Mind Map Canvas</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
